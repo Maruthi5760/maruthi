@@ -1,66 +1,144 @@
-Zombie Survival Game
-AI vs AI Zombie Survival Game
+# 🧟‍♂️ AI vs AI Zombie Survival Game
 
-Description:-
-  This is an AI vs AI simulation game where autonomous humans try to survive against a growing zombie horde. The game features:
-  Human AI with pathfinding, fear-based decision making, and combat behaviors
-  Zombie AI that chases humans using pathfinding and has varying aggression levels
-  A Pathfinding* for both humans and zombies to navigate around obstacles
-  Dynamic spawning system that increases the zombie threat over time
-  Time-based survival mode where humans must last 60 seconds to win
+An **AI simulation** game where autonomous humans and zombies engage in a survival battle. Watch as smart humans try to survive against an evolving zombie horde using fear-based decisions, pathfinding, and combat behavior — while zombies relentlessly hunt them down.
 
-Features:-
-  Autonomous Agents: Both humans and zombies make their own decisions based on game state
-  Obstacle Avoidance: Uses grid-based pathfinding to navigate complex environments
-  Combat System: Humans can shoot at zombies with limited ammo and reload times
-  Visual Feedback: Blood splatters, health bars, and directional sprites
-  Game Mechanics: Fear system, safe zones, zombie conversion, and time-based victory
+---
 
-Requirements:-
-  Python 3.x
-  Pygame library
+## 🎮 Description
 
-Installation:-
-  Clone the repository:-
-    git clone https://github.com/Maruthi5760/maruthi
-    cd ai-zombie-survival
-  Install the required dependencies:
-    pip install pygame
-  Run the game:-
-  python zom_surv.py
-Controls:-
-  ESC: Quit the game
-  R: Restart after game over
+This is an **AI vs AI simulation** game built using **Python** and **Pygame**, where:
 
-Game Rules:-
-  Humans win if at least one survives for 60 seconds
-  Zombies win if all humans are converted to zombies
+- Humans use **pathfinding**, **fear mechanics**, and **combat behavior** to survive.
+- Zombies **chase and convert** humans using aggression-driven AI.
+- The environment features **obstacles**, **safe zones**, **dynamic spawning**, and **time-based victory conditions**.
 
-Humans will:
-  Seek safe zones when scared
-  Shoot at nearby zombies
-  Flee when zombies get too close
-Zombies will:
-  Chase the nearest human
-  Become more aggressive when close to prey
-  Convert humans they catch
+Humans must survive for **60 seconds**. If all are turned into zombies, the horde wins!
 
-Customization:-
-  You can modify these constants in the code:
-  WIDTH, HEIGHT: Screen dimensions
-  FPS: Game speed
-  BULLET_SPEED, ZOMBIE_SPEED, HUMAN_SPEED: Movement speeds
-  SPAWN_RATE: How often new zombies appear
-  GAME_DURATION: Survival time needed to win
+---
 
-Future Improvements:-
-  Add different human/zombie types with varied abilities
-  Implement weapons/items humans can find
-  Add sound effects and music
-  Create more complex maps with choke points
-  Add difficulty settings
+## ✨ Features
 
-Credits:-
-Created using Python and Pygame. in assets,we have given the png files of required images if images can't be loaded we can have used pygame to draw human and zombies and background
+- 🤖 **Autonomous Agents**: Both humans and zombies make their own decisions based on the game state.
+- 🚷 **Obstacle Avoidance**: Grid-based pathfinding for realistic movement.
+- 🔫 **Combat System**: Humans shoot zombies with limited ammo and reloading time.
+- 🧠 **Fear System**: Humans flee or seek safe zones when overwhelmed.
+- 🩸 **Visual Effects**: Blood splatters, health bars, and directional sprites.
+- 🧟‍♀️ **Zombie Conversion**: Caught humans are turned into zombies.
+- ⏱️ **Time-Based Victory**: Humans win if at least one survives for 60 seconds.
+- 🌱 **Dynamic Spawning**: New zombies spawn over time to increase difficulty.
 
-Enjoy watching the AI battle it out!
+---
+
+## 📦 Requirements
+
+- Python 3.x
+- [Pygame](https://www.pygame.org/) library
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Maruthi5760/maruthi
+cd ai-zombie-survival
+```
+
+Install dependencies:
+
+```bash
+pip install pygame
+```
+
+Run the game:
+
+```bash
+python zom_surv.py
+```
+
+---
+
+## 🎮 Controls
+
+| Key | Action                  |
+|-----|-------------------------|
+| `ESC` | Quit the game         |
+| `R`   | Restart after Game Over |
+
+---
+
+## 🧠 Game Rules
+
+- ✅ **Humans Win**: If at least one human survives for **60 seconds**
+- ❌ **Zombies Win**: If **all humans** are converted
+
+---
+
+## 🧍‍♂️ Human Behavior
+
+- 🧠 Uses A* pathfinding to move
+- 🏃‍♂️ Flees when zombies are too close
+- 🧍‍♂️ Seeks safe zones when scared
+- 🔫 Shoots nearby zombies (limited ammo)
+- ⏳ Reloads when out of bullets
+
+---
+
+## 🧟 Zombie Behavior
+
+- 🧠 Pathfinds to the nearest human
+- 😈 Becomes aggressive near prey
+- 💀 Converts humans upon contact
+
+---
+
+## 🛠️ Customization
+
+Modify constants in `zom_surv.py` to tweak game behavior:
+
+| Constant        | Description                       |
+|----------------|-----------------------------------|
+| `WIDTH`, `HEIGHT` | Screen size                   |
+| `FPS`             | Frame rate / game speed       |
+| `HUMAN_SPEED`     | Human movement speed          |
+| `ZOMBIE_SPEED`    | Zombie movement speed         |
+| `BULLET_SPEED`    | Bullet travel speed           |
+| `SPAWN_RATE`      | How often zombies appear      |
+| `GAME_DURATION`   | Time humans must survive      |
+
+---
+
+## 🔮 Future Improvements
+
+- Different human/zombie types with special abilities
+- Weapons and collectible items
+- Sound effects and background music
+- More complex maps (e.g., choke points, barricades)
+- Difficulty settings and dynamic scaling
+
+---
+
+## 📁 Assets
+
+The game uses `.png` image files for humans, zombies, bullets, and background. If the images are not found, Pygame will automatically draw basic shapes for game elements.
+
+Make sure the `assets/` folder is present and contains:
+
+- `human.png`
+- `zombie.png`
+- `bullet.png`
+- `background.png` (optional)
+
+---
+
+## 🧑‍💻 Credits
+
+Created by **Maruthi** using **Python** and **Pygame**.
+
+---
+
+## 🧠 Enjoy watching the AI battle it out!
+Humans panic, zombies attack, and only one species will survive. Can AI outsmart AI?
+
+---
