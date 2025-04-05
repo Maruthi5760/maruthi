@@ -1,5 +1,5 @@
 # 🧟‍♂️ AI vs AI Zombie Survival Game
-!GAME_OVER[assests/game_screenshot]
+!GAME_OVER["assests/game_screenshot"]
 An **AI simulation** game where autonomous humans and zombies engage in a survival battle. Watch as smart humans try to survive against an evolving zombie horde using fear-based decisions, pathfinding, and combat behavior — while zombies relentlessly hunt them down.
 
 ---
