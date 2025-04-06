@@ -1,0 +1,69 @@
+AI vs AI Zombie Survival - Game Agent Explanation
+
+This simulation features two types of AI-controlled agents: Humans and Zombies, each with distinct behaviors and decision-making processes.
+
+Human AI Agent
+ Core Behaviors:
+1. Self-Preservation:
+   - Humans maintain a "fear level" based on zombie proximity (0-100 scale)
+   - When fear > 70, they flee to the nearest safe zone
+   - Health bars (100 HP) visually indicate their condition
+
+2. Combat System:
+   - Humans can shoot at zombies when they're within 150 pixels
+   - Bullet trajectory includes slight inaccuracy that increases with distance
+   - Limited ammo (30 rounds) with reload mechanics
+   - Health decreases when touched by zombies (1 HP per collision)
+
+3. Pathfinding:
+   - Uses A* algorithm to navigate around obstacles
+   - Recalculates path every 30 frames or when path is empty
+   - Grid-based system with 20px nodes for efficient path calculation
+
+4. Movement:
+   - Normal speed: 2.5 pixels/frame
+   - Sprites rotate to face movement direction
+   - Wanders randomly when no immediate threats
+
+Zombie AI Agent
+
+ Core Behaviors:
+1. Hunting Instinct:
+   - Always chases the nearest human
+   - Speed increases by aggression multiplier (0.5-1.5x) when close to humans
+   - Base speed: 1.5 pixels/frame
+
+2. Persistence:
+   - Uses A* pathfinding to navigate around obstacles
+   - Blood splatter effects show damage taken
+   - Lower health (30 HP) than humans but spawn continuously
+
+3. Infection Mechanism:
+   - When a human's health reaches 0, they turn into a new zombie
+   - Zombie sprites visually distinct with green tint and scars
+
+ Game Systems
+
+1. Bullet Physics:
+   - Travel at 10 pixels/frame
+   - Can hit zombies (10 damage) or obstacles
+   - Feature visible trajectories with proper rotation
+
+2. Environment:
+   - Obstacles block movement (walls, rubble)
+   - Safe zones provide human refuge
+   - Grid system enables efficient pathfinding
+
+3. Game Progression:
+   - Zombies spawn continuously (every 60 frames)
+   - 60-second timer determines game duration
+   - Humans win if any survive the time limit
+   - Zombies win if all humans are infected
+
+The simulation demonstrates emergent AI behaviors through:
+- Human fear responses leading to strategic retreats
+- Zombie swarming behavior around targets
+- Dynamic combat interactions
+- Pathfinding around complex obstacles
+
+Both agent types use similar A* pathfinding but apply it differently based on their objectives, creating an interesting predator-prey dynamic.
